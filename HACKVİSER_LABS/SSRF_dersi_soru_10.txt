@@ -1,0 +1,25 @@
+Lab amacı:
+        İç ağda 9090 portuna sızarak gizli mesajı almak
+
+Analiz:
+
+    ilk adım:
+        -- Sitede gerhangi bi etkileşim butonu veya input kısmı yok.
+        -- Url ile bir etkileşim yok
+        -- Requestler boş
+
+    ikinci adım:
+        -- Site içerisinde bir görsel var bu görseli farklı sekmede açtık ve paketi izledik
+        paket içeriğinde esas nokta "GET /proxy.php?url=http://172.20.49.139/static/images/hero.jpeg " burası
+        -- http://...... başlığı ile bir sonuç alamadık 
+        -- Blacklist veya başka kaçınma stratejileri işlevsiz
+
+    üçüncü adım:
+        -- http://172.20.49.139:9090 gibi bir girdi sonuç döndüremedi.
+        -- ip adresi yerine localhost:9090 yazarak girdiğimizde sonuç avuçlarımıza düştü.
+
+Sonuç :
+-- gizli mesaj bilgisi bize gönderildi ve görev tammlandı.
+        
+
+
