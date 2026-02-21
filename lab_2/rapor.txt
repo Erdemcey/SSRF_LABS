@@ -1,0 +1,21 @@
+Lab: Basic SSRF against another back-end system
+Url: https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-backend-system
+
+
+Analiz1:
+-- Stok bilgisi alan isteği yakaladık.
+-- Yük değeri bir ip ile yola başlıyordu
+-- 192.168.0.1 değeri ile sonuç alınamadı
+-- 192.168.0.2 değeri ile sunucu bulunamadı mesajı aldık 
+
+Zafiyet:
+
+-- sunucunun bulunduğu ağı taramak için isteği intruder ile payload denemesine koyduk.
+-- 0-255 arası hostları taradık ve 200 değeri dönen 55 numaralı host ile admin panele eriştik
+-- admin paneliden elde edilen ;
+        http://192.168.0.55:8080/admin/delete?username=carlos 
+    
+    adres ile carlosu sildik.
+
+Sonuç:
+ Carlos silindi.

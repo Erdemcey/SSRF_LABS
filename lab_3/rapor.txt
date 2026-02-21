@@ -1,0 +1,10 @@
+Lab: Blind SSRF with out-of-band detection
+url: https://portswigger.net/web-security/ssrf/blind/lab-out-of-band-detection
+
+Analiz:
+-- Bu sefer herhangi bir yük yok deader kısmında bir yönlendirme bölümü var oraya kendi sunucumuzu verip
+kendi sunucumuza dns isteğinde bulunursak soru çözülecektir
+
+Sonuç:
+
+-- sonuç için kendi sunucumu yada burp professionalımı almam gerekli xd

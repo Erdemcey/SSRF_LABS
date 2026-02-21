@@ -1,0 +1,30 @@
+Laboratuvar: Yerel sunucuya karşı temel SSRF saldırısı
+url: https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost
+
+
+Analiz1:
+-- Bayi stok listesini inceleyn bir kısmın isteğini yakaladık.
+-- Paket içeriği stockApi=http%3A%2F%2Fstock.weliketoshop.net%3A8080%2Fproduct%2Fstock%2Fcheck%3FproductId%3D2%26storeId%3D2 
+tarzında bir yük taşıyordu.
+-- Localhost bağlantısı açıktı.
+
+Zafiyet:
+
+-- yükün değerini http%3a//localhost/admin ile değiştirdik
+-- Admin panel erişimi kazandık.
+
+
+Analiz2:
+
+-- admin panelde kullanıcı yönetimi için bir api bağlantısı sistemi olduğu fark ettik
+
+
+Zafiyet:
+
+-- yük değerini carlos kullanıcısının silme talebi için olan api bağlantısı ile değiştirdik
+
+---> stockApi=http%3a//localhost/admin/delete%3fusername%3dcarlos
+
+Sonuç:
+
+-- Carlos silindi.

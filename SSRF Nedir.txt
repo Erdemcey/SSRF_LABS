@@ -1,0 +1,16 @@
+SSRF güvenlik zafiyeti hakkında çeşitli yerlerde çalışmalar yürüttüm.Bunlardan bazılarında ssrf ;
+        
+        
+        -- Server-Side Request Forgery (SSRF), bir saldırganın hedef sunucuyu, 
+        kendisi adına veya sunucunun kendisi gibi davranarak başka sistemlere 
+        istek göndermesi için kandırdığı bir web güvenlik zafiyetidir.
+        (HackViser)
+
+        -- SSRF,bir saldırganın sunucu tarafındaki uygulamanın istenmeyen bir konuma 
+        istek göndermesine neden olmasına olanak tanıyan bir web güvenlik açığıdır
+        (Portswigger)
+
+-Kısacası web sitesinin kullanıcı için oluşturulmuş sistemlerinin arasındaki konuşmaya salça olup farklı sorular sormaktır.
+-Çok büyük bir etki alanına sahiptir . Doğru yapılmış bir SSRF sistemin asıl sahibini değiştirebilir.
+-Arka kapıda dahil olmak üzere büyük tehditlere yol açar.
+
