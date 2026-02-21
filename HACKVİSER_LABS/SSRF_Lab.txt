@@ -1,0 +1,14 @@
+Amaç:
+-- Serverin hostname bilgisine erişmek
+
+Analiz:
+    --Otomatik bir resim oynatıcı galeri bizi karşılıyor.Resimlere tıklayınca o lokasyona
+    ile   "fetch.php?url=http://localhost/images/05.jpg"  istek atıyor.
+
+    --local host ile zafiyet varlığını onayladık.
+
+    -- file:///etc/hostname ile hostnami elde ettik.
+
+Sonuç:
+
+Hostname bilgisi ellerimizde.
